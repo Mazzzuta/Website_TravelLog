@@ -4,16 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f5f3eb">
-  <meta name="description" content="TravelLog — личный дневник путешествий для Android. Сохраняйте фотографии, отмечайте места на карте и собирайте воспоминания в поездки.">
-  <meta property="og:title" content="TravelLog — путешествие остаётся с вами">
+  <meta name="description" content="TravelLog – личный дневник путешествий для Android. Сохраняйте фотографии, отмечайте места на карте и собирайте воспоминания в поездки.">
+  <meta property="og:title" content="TravelLog – путешествие остаётся с вами">
   <meta property="og:description" content="Фотографии, заметки и любимые места. Ваш личный дневник путешествий для Android.">
   <meta property="og:type" content="website">
-  <title>TravelLog — путешествие остаётся с вами</title>
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <title>TravelLog – путешествие остаётся с вами</title>
+  <link rel="icon" type="image/png" href="assets/app-logo.png">
+  <link rel="stylesheet" href="styles.css?v=16">
 </head>
-<body>
+<body id="top">
   <a class="skip-link" href="#main">Перейти к содержимому</a>
   <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
@@ -23,79 +22,63 @@
     <symbol id="folder" viewBox="0 0 24 24"><path d="M3 6h7l2 3h9v11H3Zm0 0V4h7l2 2h9v3"/></symbol>
     <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
     <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 2v20M2 12h20M5 5l14 14M5 19 19 5"/></symbol><symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="plane" viewBox="0 0 24 24"><path d="m3 10 18-7-7 18-3-8-8-3Zm8 3L21 3"/></symbol><symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
   </svg>
   <header class="site-header wrap">
-    <a class="brand" href="#" aria-label="TravelLog — в начало страницы"><img src="assets/logo.svg" width="44" height="44" alt=""><span>TravelLog<span class="brand-dot">.</span></span></a>
+    <a class="brand" href="#" aria-label="TravelLog – в начало страницы"><img src="assets/app-logo.png" width="44" height="44" alt=""><span>TravelLog</span></a>
     <nav aria-label="Основная навигация">
       <a href="#possibilities">Возможности</a>
       <a href="#screens">Экраны</a>
       <a href="#questions">Вопросы</a>
     </nav>
-    <a class="header-download" href="#get-app">Скачать <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> Личный дневник путешествий · Android</p>
-        <h1 id="hero-title">Путешествие<br>заканчивается.<br><em>Истории остаются.</em></h1>
-        <p class="hero-description">Тот самый вид. Случайное кафе. День, который хочется прожить ещё раз. Соберите всё это в своём TravelLog.</p>
+        <h1 id="hero-title">Дневник путешествий<br>для Android</h1>
+        <p class="hero-description">Сохраняйте фотографии и заметки, отмечайте места на карте и объединяйте записи в поездки.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="https://github.com/Mazzzuta/TravelLog-android/releases/download/v1.0.1/app-release.apk"><svg class="icon" aria-hidden="true"><use href="#download"/></svg> Скачать для Android</a>
-          <a class="text-link" href="#screens">Заглянуть внутрь <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a>
+          <a class="button button-primary" href="#get-app"><svg class="icon" aria-hidden="true"><use href="#download"/></svg> Скачать для Android</a>
         </div>
         <p class="hero-note">Бесплатно · Без регистрации · Android 8.0+</p>
-        <div class="hero-bottom"><span>БОЛЬШЕ, ЧЕМ ФОТО В ГАЛЕРЕЕ</span><span class="short-line"></span><span>Меньше забытых моментов</span></div>
       </div>
       <div class="hero-scene">
-        <svg class="route-art" viewBox="0 0 600 650" fill="none" aria-hidden="true">
-          <ellipse cx="310" cy="320" rx="255" ry="270"/>
-          <ellipse cx="310" cy="320" rx="210" ry="225"/>
-          <ellipse cx="310" cy="320" rx="165" ry="180"/>
-          <path class="route-dash" d="M70 470C-10 330 95 190 220 240S415 460 520 270 430 60 345 80"/>
-          <circle class="route-point" cx="70" cy="470" r="7"/><circle class="route-point" cx="345" cy="80" r="7"/>
-        </svg>
-        <div class="travel-stamp" aria-hidden="true"><span>COLLECT MOMENTS</span><svg class="icon"><use href="#pin"/></svg><span>TRAVELLOG</span></div>
-        <div class="phone phone-map"><img src="assets/map.png" width="1080" height="2340" alt="Карта TravelLog с отметками сохранённых мест" fetchpriority="high"></div>
-        <div class="phone phone-entry"><img src="assets/entry.png" width="1080" height="2340" alt="Запись TravelLog с фотографией и местом путешествия" fetchpriority="high"></div>
+        <div class="phone phone-map"><img src="assets/map-20261102.jpg" width="1080" height="2340" alt="Карта сохранённых мест TravelLog"></div>
+        <div class="phone phone-entry"><img src="assets/feed-20261102.jpg" width="1080" height="2340" alt="Лента записей TravelLog с фотографиями"></div>
         <div class="scene-label"><svg class="icon" aria-hidden="true"><use href="#pin"/></svg><div><strong>Место. Момент. Воспоминание.</strong><span>Теперь они всегда рядом.</span></div></div>
-        <span class="scene-caption">Ваши истории — на вашей карте</span>
       </div>
     </section>
-    <section class="intro-strip" aria-label="Основные возможности"><div class="wrap strip-inner"><span>Сохраняйте <strong>моменты.</strong></span><svg class="icon strip-dot" aria-hidden="true"><use href="#spark"/></svg><span>Отмечайте <strong>места.</strong></span><svg class="icon strip-dot" aria-hidden="true"><use href="#spark"/></svg><span>Возвращайтесь <strong>к историям.</strong></span></div></section>
-    <section class="possibilities wrap section-space" id="possibilities" aria-labelledby="possibilities-title">
-      <div class="section-heading"><p class="eyebrow">01 / ВАША КОЛЛЕКЦИЯ ВПЕЧАТЛЕНИЙ</p><h2 id="possibilities-title">У каждого места<br>есть <em>ваша история.</em></h2><p>Неважно, уехали вы на другой край света или свернули на новую улицу. Впечатления заслуживают своего места.</p></div>
+    <hr class="section-divider wrap">
+    <section class="possibilities section-space" id="possibilities" aria-labelledby="possibilities-title">
+      <div class="wrap">
+      <div class="section-heading"><h2 id="possibilities-title">Возможности TravelLog</h2></div>
       <div class="features">
-        <article class="feature"><span class="feature-number">01</span><svg class="feature-icon" aria-hidden="true"><use href="#book"/></svg><h3>Поймайте момент</h3><p>Добавьте фотографии, пару строк и теги. Всё, что поможет вспомнить не только место, но и ощущения.</p></article>
-        <article class="feature"><span class="feature-number">02</span><svg class="feature-icon" aria-hidden="true"><use href="#pin"/></svg><h3>Оставьте точку на карте</h3><p>Укажите место вручную или определите геопозицию. Откройте карту и вернитесь к записи прямо из отметки.</p></article>
-        <article class="feature"><span class="feature-number">03</span><svg class="feature-icon" aria-hidden="true"><use href="#folder"/></svg><h3>Соберите целую поездку</h3><p>Объедините записи по датам путешествия. А для прогулки одного дня просто оставьте запись без поездки.</p></article>
+        <article class="feature"><h3>Начинайте с первой записи</h3><p>Без создания аккаунта. Установите приложение – и сохраните то, что хочется запомнить.</p></article>
+        <article class="feature"><h3>Фотографии и заметки</h3><p>Добавьте фотографии, пару строк и теги. Всё, что поможет вспомнить не только место, но и ощущения.</p></article>
+        <article class="feature"><h3>Места на карте</h3><p>Укажите место вручную или определите геопозицию. Откройте карту и вернитесь к записи прямо из отметки.</p></article>
+        <article class="feature"><h3>Записи по поездкам</h3><p>Объедините записи по датам путешествия. А для прогулки одного дня просто оставьте запись без поездки.</p></article>
+      </div>
       </div>
     </section>
     <section class="screens-section section-space" id="screens" aria-labelledby="screens-title">
       <div class="wrap">
-        <div class="screens-heading"><div><p class="eyebrow">02 / ЗНАКОМЬТЕСЬ, TRAVELLOG</p><h2 id="screens-title">Всё своё.<br><em>В одном приложении.</em></h2></div><p>От первой заметки до карты воспоминаний.<br>Нажмите на экран, чтобы рассмотреть его ближе.</p></div>
+        <div class="screens-heading"><div><h2 id="screens-title">Экраны приложения</h2></div></div>
         <div class="screens-grid">
-          <figure class="screen-card"><button class="screen-preview" type="button" data-screen="feed" aria-label="Увеличить скриншот ленты"><img src="assets/feed.png" width="1080" height="2340" alt="Лента записей с фотографиями, тегами и поиском" loading="lazy"><span class="expand-icon"><svg class="icon" aria-hidden="true"><use href="#plus"/></svg></span></button><figcaption><span class="screen-index">01 / ЛЕНТА</span><h3>Дни, которые были вашими</h3><p>Фотографии, заметки и быстрый поиск по воспоминаниям.</p></figcaption></figure>
-          <figure class="screen-card"><button class="screen-preview" type="button" data-screen="map" aria-label="Увеличить скриншот карты"><img src="assets/map.png" width="1080" height="2340" alt="Карта сохранённых мест в TravelLog" loading="lazy"><span class="expand-icon"><svg class="icon" aria-hidden="true"><use href="#plus"/></svg></span></button><figcaption><span class="screen-index">02 / КАРТА</span><h3>У воспоминаний есть адрес</h3><p>Все записи с координатами — на одной карте.</p></figcaption></figure>
-          <figure class="screen-card"><button class="screen-preview" type="button" data-screen="statistics" aria-label="Увеличить скриншот статистики"><img src="assets/statistics.png" width="1080" height="2340" alt="Статистика записей, поездок и фотографий" loading="lazy"><span class="expand-icon"><svg class="icon" aria-hidden="true"><use href="#plus"/></svg></span></button><figcaption><span class="screen-index">03 / СТАТИСТИКА</span><h3>Ваш год в путешествиях</h3><p>Записи по месяцам, любимые теги и сохранённые места.</p></figcaption></figure>
-          <figure class="screen-card"><button class="screen-preview" type="button" data-screen="settings" aria-label="Увеличить скриншот настроек"><img src="assets/settings.png" width="1264" height="2736" alt="Настройки профиля и цветовых схем приложения" loading="lazy"><span class="expand-icon"><svg class="icon" aria-hidden="true"><use href="#plus"/></svg></span></button><figcaption><span class="screen-index">04 / НАСТРОЙКИ</span><h3>Настроение выбираете вы</h3><p>Светлая, тёмная и готовые цветовые схемы. Ваш профиль.</p></figcaption></figure>
+          <figure class="screen-card"><div class="phone screen-phone"><img src="assets/feed-20261102.jpg" width="1080" height="2340" alt="Лента записей TravelLog с фотографиями" loading="lazy"></div><figcaption><span class="screen-index">ЛЕНТА</span><h3>Дни, которые были вашими</h3><p>Фотографии, заметки и быстрый поиск по воспоминаниям.</p></figcaption></figure>
+          <figure class="screen-card"><div class="phone screen-phone"><img src="assets/map-20261102.jpg" width="1080" height="2340" alt="Карта сохранённых мест TravelLog" loading="lazy"></div><figcaption><span class="screen-index">КАРТА</span><h3>У воспоминаний есть адрес</h3><p>Все записи с координатами – на одной карте.</p></figcaption></figure>
+          <figure class="screen-card"><div class="phone screen-phone"><img src="assets/statistics-20261102.jpg" width="1080" height="2340" alt="Статистика записей и поездок TravelLog" loading="lazy"></div><figcaption><span class="screen-index">СТАТИСТИКА</span><h3>Ваш год в путешествиях</h3><p>Записи по месяцам, любимые теги и сохранённые места.</p></figcaption></figure>
+          <figure class="screen-card"><div class="phone screen-phone"><img src="assets/settings-20261102.jpg" width="1080" height="2340" alt="Настройки TravelLog" loading="lazy"></div><figcaption><span class="screen-index">НАСТРОЙКИ</span><h3>Настроение выбираете вы</h3><p>Светлая, тёмная и готовые цветовые схемы.</p></figcaption></figure>
         </div>
-        <p class="screens-note">Реальные экраны приложения с тестовыми записями.</p>
       </div>
     </section>
-    <section class="keep-section wrap section-space" aria-labelledby="keep-title">
-      <div><p class="eyebrow">03 / ВОСПОМИНАНИЯ ПОД РУКОЙ</p><h2 id="keep-title">В дороге.<br>Дома.<br><em>Без лишних условий.</em></h2></div>
-      <div class="keep-list"><article><svg class="icon" aria-hidden="true"><use href="#check"/></svg><div><h3>Записывайте даже без сети</h3><p>Дневник хранится на устройстве. Сохранённые записи можно читать и редактировать без интернета.</p></div></article><article><svg class="icon" aria-hidden="true"><use href="#check"/></svg><div><h3>Переносите любимые истории</h3><p>Экспортируйте дневник с фотографиями в ZIP. Резервная копия поможет перенести его на другой телефон.</p></div></article><article><svg class="icon" aria-hidden="true"><use href="#check"/></svg><div><h3>Начинайте с первой записи</h3><p>Без создания аккаунта. Установите приложение — и сохраните то, что хочется запомнить.</p></div></article></div>
-    </section>
-    <section class="download-section" id="get-app" aria-labelledby="download-title"><div class="wrap download-inner"><div class="download-copy"><p class="eyebrow">СЛЕДУЮЩАЯ ИСТОРИЯ НАЧИНАЕТСЯ ЗДЕСЬ</p><h2 id="download-title">Берите с собой<br><em>больше воспоминаний.</em></h2><p>Пусть в телефоне останутся не только фотографии,<br>но и всё, что за ними стоит.</p><a class="button button-primary" href="https://github.com/Mazzzuta/TravelLog-android/releases/download/v1.0.1/app-release.apk"><svg class="icon" aria-hidden="true"><use href="#download"/></svg> Скачать TravelLog</a><p class="download-note">Версия 1.0.1 · APK, 57,6 МБ · Android 8.0+</p><a class="release-link" href="https://github.com/Mazzzuta/TravelLog-android/releases/tag/v1.0.1">Страница релиза на GitHub <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div><div class="download-art" aria-hidden="true"><img src="assets/logo.svg" width="220" height="220" alt=""><span>СОХРАНЯЙТЕ ТО, ЧТО ЧУВСТВУЕТЕ</span><span class="ticket-code">TRAVELLOG / PERSONAL JOURNAL</span></div></div></section>
-    <section class="faq wrap section-space" id="questions" aria-labelledby="faq-title"><div><p class="eyebrow">ПЕРЕД ПУТЕШЕСТВИЕМ</p><h2 id="faq-title">Пара вопросов.</h2></div><div class="faq-list">
-      <details><summary>Как установить приложение?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Скачайте APK на Android и откройте файл. Если система запросит разрешение на установку из этого источника, разрешите её для выбранного браузера или файлового менеджера. После установки приложение появится в списке приложений.</p></details>
-      <details><summary>Для чего нужен интернет?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Для загрузки карты и поиска названия места или адреса. Создавать записи, добавлять фотографии и просматривать дневник можно без подключения.</p></details>
-      <details><summary>Где хранятся мои записи?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Локально на вашем устройстве. Чтобы не потерять дневник при смене телефона или удалении приложения, сохраните ZIP-копию через настройки и перенесите её в надёжное место.</p></details>
-      <details><summary>Можно перенести дневник на другой телефон?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Да. Экспортируйте ZIP в настройках, перенесите архив и импортируйте его в TravelLog на другом устройстве. Импорт заменяет текущий дневник, поэтому предварительно сохраните его, если в нём уже есть нужные записи.</p></details>
+    <section class="download-section" id="get-app" aria-labelledby="download-title"><div class="wrap download-inner"><div class="download-copy"><h2 id="download-title">Скачать TravelLog</h2><p>Установите приложение на телефон с Android 8.0 или новее.</p></div><div class="download-actions"><a class="button button-primary" href="https://github.com/Mazzzuta/TravelLog-android/releases/download/v1.0.1/app-release.apk"><svg class="icon" aria-hidden="true"><use href="#download"/></svg> Скачать TravelLog</a><p class="download-note">Версия 1.0.1 · APK, 57,6 МБ · Android 8.0+</p><a class="release-link" href="https://github.com/Mazzzuta/TravelLog-android/releases/tag/v1.0.1">Страница релиза на GitHub <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a></div></div></section>
+    <section class="faq wrap section-space" id="questions" aria-labelledby="faq-title"><div><h2 id="faq-title">Частые вопросы</h2></div><div class="faq-list">
+      <details name="faq"><summary>Как установить приложение?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Скачайте APK на Android и откройте файл. Если система запросит разрешение на установку из этого источника, разрешите её для выбранного браузера или файлового менеджера.</p></details>
+      <details name="faq"><summary>Для чего нужен интернет?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Для загрузки карты и поиска названия места или адреса. Создавать записи, добавлять фотографии и просматривать дневник можно без подключения.</p></details>
+      <details name="faq"><summary>Где хранятся мои записи?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Локально на вашем устройстве. Чтобы не потерять дневник при смене телефона или удалении приложения, сохраните ZIP-копию через настройки и перенесите её в надёжное место.</p></details>
+      <details name="faq"><summary>Можно перенести дневник на другой телефон?<svg class="icon" aria-hidden="true"><use href="#plus"/></svg></summary><p>Да. Экспортируйте ZIP в настройках, перенесите архив и импортируйте его в TravelLog на другом устройстве. Импорт заменяет текущий дневник, поэтому предварительно сохраните его, если в нём уже есть нужные записи.</p></details>
     </div></section>
   </main>
-  <footer class="site-footer wrap"><a class="brand" href="#" aria-label="TravelLog — в начало страницы"><img src="assets/logo.svg" width="36" height="36" alt=""><span>TravelLog<span class="brand-dot">.</span></span></a><p>Маленькие заметки. Большие воспоминания.</p><a href="https://github.com/Mazzzuta/TravelLog-android">Проект на GitHub <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><span class="copyright">© 2026 TravelLog</span></footer>
-  <dialog class="image-dialog" aria-label="Просмотр экрана приложения"><form method="dialog"><button class="dialog-close" aria-label="Закрыть просмотр"><svg class="icon" aria-hidden="true"><use href="#close"/></svg></button></form><img class="dialog-image" src="assets/feed.png" width="1080" height="2340" alt=""><p class="dialog-caption"></p></dialog>
+  <footer class="site-footer wrap"><a class="brand" href="#top">TravelLog</a><a class="back-top" href="#top">Вверх <svg class="icon" aria-hidden="true"><use href="#arrow"/></svg></a><span class="copyright">© 2026 TravelLog</span></footer>
 </body>
 </html>
